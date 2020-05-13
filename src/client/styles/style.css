@@ -1,0 +1,318 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #fffff8;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f23557;
+}
+.entry {
+  background: rgba(59, 74, 107, 0.4);
+  margin-bottom: 20px;
+  width: 640px;
+  /* padding-left: 5px; */
+}
+h1,
+p {
+  text-align: center;
+}
+ textarea {
+    background: #22b2da;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+  }
+
+/* Reset style for HTML element on active to have no border*/
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+  /* Style for Placeholder Text*/
+  ::placeholder {
+    color: #f0d43a;
+    font-family: "Oswald", sans-serif;
+  }
+
+  :-ms-input-placeholder {
+    color: #f0d43a;
+    font-family: "Oswald", sans-serif;
+  }
+
+  ::-ms-input-placeholder {
+    color: #f0d43a;
+    font-family: "Oswald", sans-serif;
+  }
+
+@media all and (max-width: 699px) and (min-width: 400px) {
+  #app {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    color: #f0d43a;
+    grid-gap: 1em;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+  }
+  #data {
+    grid-row: 3;
+    margin: 30px auto;
+  }
+  #display {
+    grid-row: 2;
+    margin: auto;
+  }
+  .headline {
+    grid-row: 1;
+    justify-content: center;
+    background: #ffffff;
+    color: black;
+  }
+  .footer {
+    grid-row: 4;
+    justify-content: center;
+    background: #ffffff;
+    color: black;
+  }
+
+  .image {
+    display: flex;
+    flex-direction: row;
+    align-items: inherit;
+    width: 480px;
+    height: 320px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  /*  Basic Styling To Override Default For Basic HTML Elements */
+  label {
+    display: block;
+    font-size: 12px;
+  }
+  .entryHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+  input {
+    display: block;
+    height: 35px;
+    width: 320px;
+    background: #22b2da;
+    color: #f0d43a;
+    font-size: 15px;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+  }
+  button {
+    width: 320px;
+    height: 35px;
+    background: #3b4a6b;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+  }
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #tripLength {
+    font-size: small;
+  }
+}
+
+/* ==================== ================*/
+@media all and (max-width: 1000px) and (min-width: 700px) {
+  #app {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    color: #f0d43a;
+    grid-gap: 1em;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+  }
+  #data {
+    grid-row: 3;
+    margin: 30px auto;
+  }
+  #display {
+    grid-row: 2;
+    margin: auto;
+  }
+  .headline {
+    grid-row: 1;
+    justify-content: center;
+    background: #ffffff;
+    color: black;
+  }
+  .footer {
+    grid-row: 4;
+    justify-content: center;
+    background: #ffffff;
+    color: black;
+  }
+
+  .image {
+    display: flex;
+    flex-direction: row;
+    align-items: inherit;
+    width: 640px;
+    height: 423px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  /*  Basic Styling To Override Default For Basic HTML Elements */
+  label {
+    display: block;
+    font-size: 18px;
+  }
+  .entryHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+  input {
+    display: block;
+    height: 35px;
+    width: 320px;
+    background: #22b2da;
+    color: #f0d43a;
+    font-size: 15px;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+  }
+  button {
+    width: 320px;
+    height: 35px;
+    background: #3b4a6b;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+  }
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #tripLength {
+    font-size: medium;
+  }
+}
+
+@media all and (min-width: 1001px) {
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1f auto 1fr;
+    color: #f0d43a;
+    grid-gap: 1em;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+  }
+
+  #data {
+    grid-column: 1/2;
+    grid-row: 2;
+    margin: 100px auto 100px auto;
+  }
+  #display {
+    grid-column: 2/3;
+    grid-row: 2;
+    margin: auto 150px auto auto;
+  }
+  .button-cont {
+    padding: 10px 0 15px 0px;
+  }
+
+  .headline {
+    grid-column: 1/3;
+    grid-row: 1;
+    justify-content: center;
+    background: #ffffff;
+    color: black;
+  }
+  .footer {
+    grid-column: 1/3;
+    grid-row: 3;
+    justify-content: center;
+    background: #ffffff;
+    color: black;
+  }
+
+  .image {
+    display: flex;
+    flex-direction: row;
+    align-items: inherit;
+    width: 640px;
+    height: 423px;
+  }
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  /*  Basic Styling To Override Default For Basic HTML Elements */
+  label {
+    display: block;
+    font-size: 20px;
+  }
+  .entryHolder {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+  input {
+    display: block;
+    height: 60px;
+    width: 320px;
+    background: #22b2da;
+    color: #f0d43a;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+  }
+
+  button {
+    width: 320px;
+    height: 60px;
+    background: #3b4a6b;
+    color: #f0d43a;
+    font-size: 26px;
+    font-family: "Oswald", sans-serif;
+    border: none;
+    box-shadow: 2px 4px 5px #444;
+  }
+  .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #tripLength {
+    font-size: medium;
+  }
+
+}
